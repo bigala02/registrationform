@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Student Registration Form</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <h1>STUDENT REGISTRATION FORM</h1>
+
+        <p class="quote">
+          “Building the future through innovation and engineering excellence.”
+        </p>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <form id="registerForm">
+          <!-- Full Name -->
+          <div class="input-group">
+            <label> Full Name <span>*</span> </label>
+
+            <input type="text" required />
+          </div>
+
+          <!-- Matric Number -->
+          <div class="input-group">
+            <label> Matric Number <span>*</span> </label>
+
+            <input type="text" required />
+          </div>
+
+          <!-- Email -->
+          <div class="input-group">
+            <label> Email Address <span>*</span> </label>
+
+            <input type="email" required />
+          </div>
+
+          <!-- Phone Number -->
+          <div class="input-group">
+            <label> Phone Number <span>*</span> </label>
+
+            <input type="tel" required />
+          </div>
+
+          <!-- Gender -->
+          <div class="input-group">
+            <label> Gender <span>*</span> </label>
+
+            <select required>
+              <option value="">Select Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+
+          <!-- Level -->
+          <div class="input-group">
+            <label> Level <span>*</span> </label>
+
+            <select required>
+              <option value="">Select Level</option>
+              <option>100 Level</option>
+              <option>200 Level</option>
+              <option>300 Level</option>
+              <option>400 Level</option>
+              <option>500 Level</option>
+            </select>
+          </div>
+
+          <!-- Department -->
+          <div class="input-group">
+            <label> Department <span>*</span> </label>
+
+            <input type="text" value="Civil Engineering" required />
+          </div>
+
+          <!-- State -->
+          <div class="input-group">
+            <label> State of Origin <span>*</span> </label>
+
+            <input type="text" required />
+          </div>
+
+          <!-- DOB -->
+          <div class="input-group">
+            <label> Date of Birth <span>*</span> </label>
+
+            <input type="date" required />
+          </div>
+
+          <!-- Address -->
+          <div class="input-group">
+            <label> Residential Address <span>*</span> </label>
+
+            <textarea rows="4" required></textarea>
+          </div>
+
+          <!-- Passport -->
+          <div class="input-group">
+            <label> Passport Photograph <span>*</span> </label>
+
+            <input type="file" id="imageInput" accept="image/*" required />
+
+            <img id="previewImage" src="" alt="" />
+          </div>
+
+          <!-- Username -->
+          <div class="input-group">
+            <label> Username <span>*</span> </label>
+
+            <input type="text" required />
+          </div>
+
+          <!-- PASSWORD -->
+
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+
+          <!-- CONFIRM PASSWORD -->
+
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm Password"
+            required
+          />
+
+          <!-- PASSWORD MESSAGE -->
+
+          <p id="passwordMessage"></p>
+
+          <!-- SUCCESS / ERROR MESSAGE -->
+
+          <p id="successMessage"></p>
+
+          <!-- Terms -->
+          <div class="checkbox-group">
+            <input type="checkbox" required />
+
+            <p>
+              I agree to the Terms and Conditions
+              <span>*</span>
+            </p>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="submitBtn">Register Now</button>
+        </form>
+      </div>
+    </div>
+    <!-- SUCCESS POPUP -->
+    <div class="popup success-popup" id="successPopup">
+      <div class="popup-box">
+        <div class="icon success-icon">✓</div>
+        <h2>Success</h2>
+        <p>Registration Successful</p>
+        <button onclick="closeSuccessPopup()">OK</button>
+      </div>
+    </div>
+
+    <!-- FAILED POPUP -->
+    <div class="popup fail-popup" id="failPopup">
+      <div class="popup-box">
+        <div class="icon fail-icon">✕</div>
+        <h2>Failed</h2>
+        <p>Registration Failed</p>
+        <button onclick="closeFailPopup()">Try Again</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
